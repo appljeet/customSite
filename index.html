@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:100');
+    @import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+
+    /*to hide scrollbar*/
+    html {
+        overflow:   scroll;
+        scroll-behavior: smooth;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
+
+
+
+    /*for scroll indicator*/
+    .progress-container {
+        width: 100%;
+        height: 3px;
+        background: rgb(33,37,41);
+    }
+    .progress-bar {
+        height: 3px;
+        width: 0%;
+    }
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: #f1f1f1;
+
+    }
+
+
+    /*for type writer effect*/
+
+    .line-1{
+        position: relative;
+        top: 50%;
+        margin: 0 auto;
+        border-right: 2px solid rgba(255,255,255,.75);
+        font-size: 180%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        transform: translateY(-50%);
+    }
+
+    /* Animation */
+    .anim-typewriter{
+        animation: typewriter 1.5s steps(20) 1s 1 normal both,
+        blinkTextCursor 500ms steps(44) infinite normal;
+    }
+    @keyframes typewriter{
+        from{width: 0;}
+        to{width: 7em;}
+    }
+    @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent;}
+    }
+
+
+
+/*for neon text*/
+
+    :root {
+        /* Set neon color */
+        --neon-text-color: rgb(255,15,0);
+    }
+
+    h3 {
+        font-weight: 100;
+        color: green;
+        padding-top: 15px;
+
+        text-transform: uppercase;
+        animation: flicker 1.5s infinite alternate;
+    }
+
+
+    @keyframes flicker {
+
+        0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+
+            text-shadow:
+                    -0.2rem -0.2rem 1rem #fff,
+                    0.2rem 0.2rem 1rem #fff,
+                    0 0 2rem var(--neon-text-color),
+                    0 0 4rem var(--neon-text-color),
+                    0 0 6rem var(--neon-text-color),
+                    0 0 8rem var(--neon-text-color),
+                    0 0 10rem var(--neon-text-color);
+        }
+
+        20%, 24%, 55% {
+            text-shadow: none;
+        }
+    }
+
+
+    #videoBG {
+        position:fixed;
+        z-index: -1;
+    }
+
+    .center { width: 100%;}
+
+
+
+
+
+
+
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>abhi's website</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Andika">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+<body id="bodyId" style="background-color: black;">
+
+    <section>
+
+<!--        scrollbar-->
+        <div class="header">
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
+        </div>
+
+<!--        landing section-->
+    </section>
+    <span style="line-height: 200px;">&nbsp;</span>
+    <section style="height: 100%;margin: 0;top:20px; position: relative">
+
+        <h1 class="line-1 anim-typewriter" style="font-size: 30px;color: rgb(163,163,163)">Hi! My name's</h1>
+        <h3 class="text-center" id="name" style="font-size: 80px;color: white;">Abhijit Singh</h3>
+
+        <button class="btn btn-primary" type="button" onclick="document.getElementById('first').scrollIntoView();" style=" outline: none; margin-left: 49%;margin-top: 2%;background-color: rgb(255,15,0);color: rgb(0,0,0);border-color: rgb(255,15,0); height: 38px; width: 38px"><i class="fa fa-angle-down"></i></button>
+    </section>
+
+    <span style="line-height: 200px;">&nbsp;</span>
+
+<!--    i make....-->
+
+    <section id="first" >
+<!--        <div id="iPhoneBackground" style=" display: none; position: fixed; top: 0; width: 100%; height: 100%; z-index: -1;">-->
+<!--            <video id="videoBG" class="center" poster="assets/nike.png" autoplay muted>-->
+<!--                <source src="assets/newPhone.mp4" type="video/mp4">-->
+<!--            </video>-->
+<!--        </div>-->
+        <div class="row" id="websites" style="top: 0;position: sticky">
+
+            <div class="col" style="margin-top: 15%">
+                <h1 style="padding-left: 10%;">and I make</h1>
+                <h1 id="change" style="font-size:60px;padding-left: 15%;color: rgb(51,106,160);">Websites</h1>
+            </div>
+
+
+
+        </div>
+
+<!--        websites-->
+        <div class="row" >
+            <div class="col" style="margin-top:5%;padding-right: 10%;padding-left: 45%">
+                <h1 style="color: white; font-size: 50px; letter-spacing: 20px">Like this one</h1>
+                <img style="margin-left:100%;width: 5%;" src="assets/arrowSide.png"/>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="col" style="margin-top:1%;padding-right: 10%;padding-left: 45%">
+            <img style="cursor:pointer;width: 100% " id="poison" src="assets/staticPoison.jpg" />
+        </div>
+
+
+
+
+        <div class="col" style="margin-top: 20%;padding-right: 10%;padding-left: 45%">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            </p>
+        </div>
+
+
+<!--        apps-->
+        <h1>lol</h1>
+        <div class="col" style="margin-top: 10%;padding-right: 10%;padding-left: 45%">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            </p>
+        </div>
+        <h1>lol</h1>
+
+<!--        cad-->
+        <div class="col" style="margin-top: 10%;padding-right: 10%;padding-left: 45%">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+            </p>
+        </div>
+
+
+<!-- different section-->
+    </section>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <h1>lol</h1>
+    <section>
+
+    </section>
+
+
+    <script>
+        //for gif hover
+        $(function() {
+
+            $("#poison").click(
+                function (){
+                    window.open('https://poisonproxies-990b7.firebaseapp.com/');
+                }
+            );
+            $("#poison").hover(
+                function() {
+                    $(this).attr("src", "assets/poisonGif.gif");
+                },
+                function() {
+                    $(this).attr("src", "assets/staticPoison.jpg");
+                }
+            );
+        });
+    </script>
+
+    <script>
+
+
+        window.onscroll = function() {
+            scrollbar();
+            changePosition();
+            // changeBackground();
+        };
+
+        // function changeBackground(){
+        //     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        //
+        //     var iPhone = document.getElementById("iPhoneBackground");
+        //
+        //     if (winScroll<900){
+        //         iPhone.style.display="none"
+        //     }else if(winScroll>900){
+        //         iPhone.style.display="block";
+        //     }
+        // }
+
+        function scrollbar() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
+        }
+
+        function changePosition(){
+            let currentWord = document.getElementById('change');
+            let body = document.getElementById('bodyId');
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+
+
+            if (winScroll<1400){
+                currentWord.innerText="Websites";
+                currentWord.style.color='rgb(51,106,160)';
+                body.style.backgroundColor='black';
+
+            }
+
+
+            if (winScroll>1400&&winScroll<1800){
+                currentWord.innerText="Apps";
+                currentWord.style.color='red';
+                body.style.backgroundColor='white';
+
+            }
+
+            if (winScroll>1800){
+                currentWord.innerText="CAD Models";
+                currentWord.style.color='green';
+                body.style.backgroundColor='black';
+            }
+
+        }
+
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
