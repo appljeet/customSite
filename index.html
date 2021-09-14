@@ -77,11 +77,12 @@
 
     h3 {
         font-weight: 100;
-        color: green;
         padding-top: 15px;
 
+
+
         text-transform: uppercase;
-        animation: flicker 1.5s infinite alternate;
+        animation: flicker 4s;
     }
 
 
@@ -159,15 +160,11 @@
 <!--    i make....-->
 
     <section id="first" >
-<!--        <div id="iPhoneBackground" style=" display: none; position: fixed; top: 0; width: 100%; height: 100%; z-index: -1;">-->
-<!--            <video id="videoBG" class="center" poster="assets/nike.png" autoplay muted>-->
-<!--                <source src="assets/newPhone.mp4" type="video/mp4">-->
-<!--            </video>-->
-<!--        </div>-->
+
         <div class="row" id="websites" style="top: 0;position: sticky">
 
             <div class="col" style="margin-top: 15%">
-                <h1 style="padding-left: 10%;">and I make</h1>
+                <h1 id="changeTop" style="padding-left: 10%;color: white">and I make</h1>
                 <h1 id="change" style="font-size:60px;padding-left: 15%;color: rgb(51,106,160);">Websites</h1>
             </div>
 
@@ -181,46 +178,42 @@
                 <h1 style="color: white; font-size: 50px; letter-spacing: 20px">Like this one</h1>
                 <img style="margin-left:100%;width: 5%;" src="assets/arrowSide.png"/>
             </div>
-
-
         </div>
 
 
 
-
+        <!--photo mosh-->
         <div class="col" style="margin-top:1%;padding-right: 10%;padding-left: 45%">
             <img style="cursor:pointer;width: 100% " id="poison" src="assets/staticPoison.jpg" />
         </div>
 
 
 
+        <!--        apps-->
 
-        <div class="col" style="margin-top: 20%;padding-right: 10%;padding-left: 45%">
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-            </p>
+        <div class="row" >
+            <div class="col" style="margin-top:25%;padding-right: 10%;padding-left: 45%">
+                <h1 style="color: black; font-size: 50px; letter-spacing: 20px">Like these ones</h1>
+                <img style="margin-left:100%;width: 5%;" src="assets/blackArrow.png"/>
+            </div>
         </div>
 
 
-<!--        apps-->
-        <h1>lol</h1>
-        <div class="col" style="margin-top: 10%;padding-right: 10%;padding-left: 45%">
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
 
-            </p>
-        </div>
-        <h1>lol</h1>
 
-<!--        cad-->
-        <div class="col" style="margin-top: 10%;padding-right: 10%;padding-left: 45%">
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-
-            </p>
+        <div class="col" style="margin-top:1%;padding-right: 10%;padding-left: 45%">
+            <img style="cursor:pointer;width: 100% " id="iPad" src="assets/starter.png" />
         </div>
 
 
-<!-- different section-->
+        <div class="col" style="margin-top:5%;padding-right: 10%;padding-left: 45%">
+            <img style="margin-left:100%;width: 5%;" src="assets/blackArrow.png"/>
+            <img style="margin-top:1%;cursor:pointer;width: 100% " id="moreApps" src="assets/staticPoison.jpg" />
+        </div>
+
     </section>
+
+
     <h1>lol</h1>
     <h1>lol</h1>
     <h1>lol</h1>
@@ -230,11 +223,7 @@
     <h1>lol</h1>
     <h1>lol</h1>
     <h1>lol</h1>
-    <h1>lol</h1>
-    <h1>lol</h1>
-    <h1>lol</h1>
-    <h1>lol</h1>
-    <h1>lol</h1>
+
     <section>
 
     </section>
@@ -257,6 +246,21 @@
                     $(this).attr("src", "assets/staticPoison.jpg");
                 }
             );
+
+
+            $("#iPad").click(
+                function (){
+                    window.open('https://poisonproxies-990b7.firebaseapp.com/');
+                }
+            );
+            $("#iPad").hover(
+                function() {
+                    $(this).attr("src", "assets/actualiPad.gif");
+                },
+                function() {
+                    $(this).attr("src", "assets/starter.png");
+                }
+            );
         });
     </script>
 
@@ -269,18 +273,6 @@
             // changeBackground();
         };
 
-        // function changeBackground(){
-        //     var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        //
-        //     var iPhone = document.getElementById("iPhoneBackground");
-        //
-        //     if (winScroll<900){
-        //         iPhone.style.display="none"
-        //     }else if(winScroll>900){
-        //         iPhone.style.display="block";
-        //     }
-        // }
-
         function scrollbar() {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -290,28 +282,29 @@
 
         function changePosition(){
             let currentWord = document.getElementById('change');
+            let topText = document.getElementById('changeTop');
             let body = document.getElementById('bodyId');
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
 
 
             if (winScroll<1400){
+                topText.style.color= 'white';
                 currentWord.innerText="Websites";
                 currentWord.style.color='rgb(51,106,160)';
                 body.style.backgroundColor='black';
-
             }
 
 
-            if (winScroll>1400&&winScroll<1800){
+            if (winScroll>1400&&winScroll<2600){
+                topText.style.color= 'black';
                 currentWord.innerText="Apps";
                 currentWord.style.color='red';
                 body.style.backgroundColor='white';
 
             }
 
-            if (winScroll>1800){
-                currentWord.innerText="CAD Models";
-                currentWord.style.color='green';
+            if (winScroll>2600){
+                topText.style.color= 'white';
                 body.style.backgroundColor='black';
             }
 
